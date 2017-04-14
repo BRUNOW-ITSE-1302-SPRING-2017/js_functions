@@ -79,9 +79,9 @@ function area(width, height)
 	works. You'll need to uncomment the code below once you've written that function.
 */
 
-// var myArea = area(25, 10);
+var myArea = area(25, 10);
 
-// print("This is my area: ", myArea);
+print("This is my area: ", myArea);
 
 /*
 	OK now it is your turn again. Write a function that returns the area of a triangle,
@@ -89,6 +89,11 @@ function area(width, height)
 */
 
 // CREATE areaOfTriangleFromBaseAndHeight FUNCTION HERE
+function areaOfTriangleFromBaseAndHeight(base, height)
+{
+	return 0.5 * base * height
+}
+
 
 /*
 	Now call that function passing in the variables 71 for the height and 256 for
@@ -97,6 +102,8 @@ function area(width, height)
 */
 
 // CALL areaOfTriangleFromBaseAndHeight FUNCTION HERE
+var myArea = areaOfTriangleFromBaseAndHeight(256, 71)
+print("This is my area: ", myArea)
 
 /*
 	Let's make things a little more difficult. This time, create a function called
@@ -105,6 +112,10 @@ function area(width, height)
 */
 
 // CREATE areaOfTriangleFromThreeSides FUNCTION HERE
+function areaOfTriangleFromThreeSides()
+{
+
+}
 
 /*
 	Now call that function passing in the variables 5, 6, and 7 for the three 
@@ -133,7 +144,7 @@ var thisDiv = document.getElementById("myDiv");
 	to see the output):
 */
 
-// print("This is my DIV: ", thisDiv);
+print("This is my DIV: ", thisDiv);
 
 /*
 	Not much to it. As you can see, it just prints out the HTML because that is
@@ -141,12 +152,12 @@ var thisDiv = document.getElementById("myDiv");
 	the code below to see it work):
 */
 
-// thisDiv.innerHTML = "I AM DIFFERENT TEXT NOW!";
-// thisDiv.style.backgroundColor = "#000000";
-// thisDiv.style.color = "#FFFFFF";
-// thisDiv.style.textAlign = "center";
-// thisDiv.style.padding = "5px";
-// thisDiv.style.borderRadius = "4px";
+ thisDiv.innerHTML = "Whatever I want";
+ thisDiv.style.backgroundColor = "#000000";
+ thisDiv.style.color = "#FFFFFF";
+ thisDiv.style.textAlign = "center";
+ thisDiv.style.padding = "5px";
+ thisDiv.style.borderRadius = "4px";
 
 /*
 	Like GUI programming in C#, we can react to events like clicking on a button.
@@ -158,8 +169,10 @@ var thisButton = document.getElementById("myButton");
 
 thisButton.onclick = function ()
 {
-	console.log("click");
+	changeStyle("NEW TEXT", "#FF0000", "#00FFFF")
 }
+
+print("This is a background color: ", thisDiv.style.backgroundColor)
 
 /*
 	Now if you click the button in the console you'll see the output of "click".
@@ -171,5 +184,11 @@ thisButton.onclick = function ()
 */
 
 // CREATE changeStyle FUNCTION HERE
-
+function changeStyle()
+{
+    if (thisDiv.style.backgroundColor == "rgb(0, 0, 0)")
+    {
+        print("yep")
+    }
+}
 // CALL changeStyle WHEN THE BUTTON IS CLICKED HERE
